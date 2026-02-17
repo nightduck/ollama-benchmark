@@ -107,6 +107,16 @@ def run_benchmark(models_file_path, benchmark_file_path, type, ollamabin: str = 
                                         stored_nums.append(number)
                                         #print(number)
 
+                        result = subprocess.run([ollamabin, 'ps'], capture_output=True, text=True, check=True, encoding='utf-8')
+                        std_out = result.stdout
+                        #print(result.stdout)
+                        file1.write(std_out)
+
+                        result = subprocess.run([ollamabin, 'stop', model_name], capture_output=True, text=True, check=True, encoding='utf-8')
+                        std_err = result.stderr
+                        #print(result.stderr)
+                        file1.write(std_err)
+
                         print("-"*20) 
                         if(len(stored_nums)!=0):       
                             average = sum(stored_nums)/len(stored_nums)

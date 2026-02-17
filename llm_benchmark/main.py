@@ -41,17 +41,13 @@ def run(
         print(f"running custom benchmark from models_file_path: {models_file_path}")
         print(f"Disabling sendinfo for custom benchmark")
     else:
-        models_file_path = str(files('llm_benchmark').joinpath('data/benchmark_models_32gb_ram.yml'))
-        if(ft_mem_size>=1 and ft_mem_size <2):
-            models_file_path = str(files('llm_benchmark').joinpath('data/benchmark_models_2gb_ram.yml'))
+        models_file_path = str(files('llm_benchmark').joinpath('data/benchmark_models_16b.yml'))
+        if(ft_meme_size>= 1 and ft_mem_size <2):
+            models_file_path = str(files('llm_benchmark').joinpath('data/benchmark_models_2b.yml'))
         elif(ft_mem_size>=2 and ft_mem_size <4):
-            models_file_path = str(files('llm_benchmark').joinpath('data/benchmark_models_3gb_ram.yml'))
+            models_file_path = str(files('llm_benchmark').joinpath('data/benchmark_models_4b.yml'))
         elif(ft_mem_size>=4 and ft_mem_size <7):
-            models_file_path = str(files('llm_benchmark').joinpath('data/benchmark_models_4gb_ram.yml'))
-        elif(ft_mem_size>=7 and ft_mem_size <15):
-            models_file_path = str(files('llm_benchmark').joinpath('data/benchmark_models_8gb_ram.yml'))
-        elif(ft_mem_size>=15 and ft_mem_size <31):
-            models_file_path = str(files('llm_benchmark').joinpath('data/benchmark_models_16gb_ram.yml'))
+            models_file_path = str(files('llm_benchmark').joinpath('data/benchmark_models_8b.yml'))
 
     check_models.pull_models(models_file_path)
     print('-'*10)
