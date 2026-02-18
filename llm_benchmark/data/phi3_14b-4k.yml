@@ -1,0 +1,20 @@
+# Author: Jason Chuang
+# License: MIT
+# Created: 2025-02-02
+version: 2.0
+models:
+  - model: phi3:14b-medium-4k-instruct-q2_K
+  - model: phi3:14b-medium-4k-instruct-q3_K_S
+  - model: phi3:14b-medium-4k-instruct-q3_K_M
+  - model: phi3:14b-medium-4k-instruct-q3_K_L
+  - model: phi3:14b-medium-4k-instruct-q4_0  # Default (same hash as medium/14b)
+  - model: phi3:14b-medium-4k-instruct-q4_1
+  - model: phi3:14b-medium-4k-instruct-q4_K_S
+  - model: phi3:14b-medium-4k-instruct-q4_K_M
+  - model: phi3:14b-medium-4k-instruct-q5_0
+  - model: phi3:14b-medium-4k-instruct-q5_1
+  - model: phi3:14b-medium-4k-instruct-q5_K_S
+  - model: phi3:14b-medium-4k-instruct-q5_K_M
+  - model: phi3:14b-medium-4k-instruct-q6_K
+  - model: phi3:14b-medium-4k-instruct-q8_0
+  - model: phi3:14b-medium-4k-instruct-fp16

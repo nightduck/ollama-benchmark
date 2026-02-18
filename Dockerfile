@@ -17,9 +17,6 @@ RUN ln -fs /usr/share/zoneinfo/UTC /etc/localtime \
   && dpkg-reconfigure --frontend noninteractive tzdata \
   && rm -rf /var/lib/apt/lists/*
 
-COPY . /app
-WORKDIR /app
-
 # Configure timezone and locale
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
@@ -34,12 +31,16 @@ RUN apt-get update && \
       git \
     && rm -rf /var/lib/apt/lists/*
 
-# TODO: Build and install the ollama-benchmark repo
+FROM base AS ollamabenchmark
+
+# Build and install the ollama-benchmark repo
 RUN git clone https://github.com/nightduck/ollama-benchmark.git
-RUN cd ollama-benchmark
+WORKDIR /ollama-benchmark
 RUN python3 -m venv /opt/venv
 RUN . /opt/venv/bin/activate && pip install -r requirements.txt
 RUN python3 setup.py install
 
+FROM ollamabenchmark AS runner
+
 # TODO: Have entry point run the benchmark script with appropriate arguments
-CMD . /opt/venv/bin/activate && llm_benchmark run
+ENTRYPOINT ["/bin/bash"]

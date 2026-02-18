@@ -3,16 +3,42 @@
 # Created: 2025-02-02
 version: 2.0
 models:
+  # Deepseek
   - model: deepseek-r1:1.5b
+  # Gemini
   - model: gemma3:270m
   - model: gemma3:1.5b
-  - model: llama3.2:1b
-  - model: qwen3-vl:2b
-  - model: gemma3n:e2b
-  - model: llama3.2:3b
   - model: gemma3:4b
+  - model: gemma3n:e2b
   - model: gemma3n:e4b
+  - model: gemma2:2b
+  - model: gemma:2b
+  # Llama
+  - model: llama3.2:1b
+  - model: llama3.2:3b
+  - model: tinyllama:1.1b
+  # Qwen
+  - model: qwen3-vl:2b
+  - model: qwen3:0.6b
+  - model: qwen3:1.7b
+  - model: qwen3:4b
   - model: qwen3-vl:4b
+  - model: qwen2.5:0.5b
+  - model: qwen2.5:1.5b
+  - model: qwen2.5:3b
+  - model: qwen2.5vl:3b
+  - model: qwen2:0.5b
+  - model: qwen2:1.5b
+  - model: qwen:0.5b
+  - model: qwen:1.8b
+  - model: qwen:4b
+  # Granite
+  - model: granite4:350m
+  - model: granite4:1b
+  - model: granite4:3b
+  # Mistral
   - model: ministral-3:3b
+  # Phi
   - model: phi4-mini:3.8b
-  
+  - model: phi3:3.8b
+  - model: phi3.5:3.8b

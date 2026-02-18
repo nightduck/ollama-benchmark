@@ -1,0 +1,26 @@
+# Author: Jason Chuang
+# License: MIT
+# Created: 2025-02-02
+version: 2.0
+models:
+  - model: deepseek-r1:1.5b-qwen-distill-q4_K_M  # Default
+  - model: deepseek-r1:1.5b-qwen-distill-q8_0
+  - model: deepseek-r1:1.5b-qwen-distill-fp16
+  - model: deepseek-r1:7b-qwen-distill-q4_K_M
+  - model: deepseek-r1:7b-qwen-distill-q8_0
+  - model: deepseek-r1:7b-qwen-distill-fp16
+  - model: deepseek-r1:7b-qwen-distill-q4_K_M  # Default
+  - model: deepseek-r1:7b-qwen-distill-q8_0
+  - model: deepseek-r1:7b-qwen-distill-fp16
+  - model: deepseek-r1:8b-0528-qwen3-q4_K_M  # Default
+  - model: deepseek-r1:8b-0528-qwen3-q8_0
+  - model: deepseek-r1:8b-0528-qwen3-fp16
+  - model: deepseek-r1:8b-llama-distill-q4_K_M
+  - model: deepseek-r1:8b-llama-distill-q8_0
+  - model: deepseek-r1:8b-llama-distill-fp16
+  - model: deepseek-r1:11b-llama-distill-q4_K_M
+  - model: deepseek-r1:11b-llama-distill-q8_0
+  - model: deepseek-r1:11b-llama-distill-fp16
+  - model: deepseek-r1:14b-qwen-distill-q4_K_M  # Default
+  - model: deepseek-r1:14b-qwen-distill-q8_0
+  - model: deepseek-r1:14b-qwen-distill-fp16

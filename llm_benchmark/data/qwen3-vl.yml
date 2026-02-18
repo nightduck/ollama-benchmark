@@ -1,0 +1,24 @@
+# Author: Jason Chuang
+# License: MIT
+# Created: 2025-02-02
+version: 2.0
+models:
+  - model: qwen3-vl:2b-instruct-q4_K_M
+  - model: qwen3-vl:2b-instruct-q8_0
+  - model: qwen3-vl:2b-instruct-bf16
+  - model: qwen3-vl:2b-thinking-q4_K_M  # Default
+  - model: qwen3-vl:2b-thinking-q8_0
+  - model: qwen3-vl:2b-thinking-bf16
+  - model: qwen3-vl:4b-instruct-q4_K_M
+  - model: qwen3-vl:4b-instruct-q8_0
+  - model: qwen3-vl:4b-instruct-bf16
+  - model: qwen3-vl:4b-thinking-q4_K_M  # Default
+  - model: qwen3-vl:4b-thinking-q8_0
+  - model: qwen3-vl:4b-thinking-bf16
+  - model: qwen3-vl:8b-instruct-q4_K_M
+  - model: qwen3-vl:8b-instruct-q8_0
+  - model: qwen3-vl:8b-instruct-bf16
+  - model: qwen3-vl:8b-thinking-q4_K_M  # Default
+  - model: qwen3-vl:8b-thinking-q8_0
+  - model: qwen3-vl:8b-thinking-bf16
+

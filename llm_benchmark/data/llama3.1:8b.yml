@@ -1,0 +1,35 @@
+# Author: Jason Chuang
+# License: MIT
+# Created: 2025-02-02
+version: 2.0
+models:
+  - model: llama3.1:8b-instruct-q2_K
+  - model: llama3.1:8b-instruct-q3_K_S
+  - model: llama3.1:8b-instruct-q3_K_M
+  - model: llama3.1:8b-instruct-q3_K_L
+  - model: llama3.1:8b-instruct-q4_0
+  - model: llama3.1:8b-instruct-q4_1
+  - model: llama3.1:8b-instruct-q4_K_S
+  - model: llama3.1:8b-instruct-q4_K_M  # Default
+  - model: llama3.1:8b-instruct-q5_0
+  - model: llama3.1:8b-instruct-q5_1
+  - model: llama3.1:8b-instruct-q5_K_S
+  - model: llama3.1:8b-instruct-q5_K_M
+  - model: llama3.1:8b-instruct-q6_K
+  - model: llama3.1:8b-instruct-q8_0
+  - model: llama3.1:8b-instruct-fp16
+  - model: llama3.1:8b-text-q2_K
+  - model: llama3.1:8b-text-q3_K_S
+  - model: llama3.1:8b-text-q3_K_M
+  - model: llama3.1:8b-text-q3_K_L
+  - model: llama3.1:8b-text-q4_0
+  - model: llama3.1:8b-text-q4_1
+  - model: llama3.1:8b-text-q4_K_S
+  - model: llama3.1:8b-text-q4_K_M
+  - model: llama3.1:8b-text-q5_0
+  - model: llama3.1:8b-text-q5_1
+  - model: llama3.1:8b-text-q5_K_S
+  - model: llama3.1:8b-text-q5_K_M
+  - model: llama3.1:8b-text-q6_K
+  - model: llama3.1:8b-text-q8_0
+  - model: llama3.1:8b-text-fp16

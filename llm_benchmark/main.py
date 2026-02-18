@@ -42,7 +42,7 @@ def run(
         print(f"Disabling sendinfo for custom benchmark")
     else:
         models_file_path = str(files('llm_benchmark').joinpath('data/benchmark_models_16b.yml'))
-        if(ft_meme_size>= 1 and ft_mem_size <2):
+        if(ft_mem_size>= 1 and ft_mem_size <2):
             models_file_path = str(files('llm_benchmark').joinpath('data/benchmark_models_2b.yml'))
         elif(ft_mem_size>=2 and ft_mem_size <4):
             models_file_path = str(files('llm_benchmark').joinpath('data/benchmark_models_4b.yml'))

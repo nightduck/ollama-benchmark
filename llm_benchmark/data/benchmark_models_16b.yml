@@ -3,27 +3,72 @@
 # Created: 2025-02-02
 version: 2.0
 models:
+  # Deepseek
   - model: deepseek-r1:1.5b
-  - model: gemma3:270m
-  - model: gemma3:1.5b
-  - model: llama3.2:1b
-  - model: qwen3-vl:2b
-  - model: gemma3n:e2b
-  - model: llama3.2:3b
-  - model: gemma3:4b
-  - model: gemma3n:e4b
-  - model: qwen3-vl:4b
-  - model: ministral-3:3b
-  - model: phi4-mini:3.8b
-  - model: llama3.1:8b
   - model: deepseek-r1:7b
   - model: deepseek-r1:8b
-  - model: llava:7b
-  - model: dolphin3:8b
-  - model: qwen3-vl:8b
-  - model: ministral-3:8b
-  - model: olmo3:7b
   - model: deepseek-r1:14b
+  # Gemini
+  - model: gemma3:270m
+  - model: gemma3:1.5b
+  - model: gemma3:4b
   - model: gemma3:12b
-  - model: llava:13b
+  - model: gemma3n:e2b
+  - model: gemma3n:e4b
+  - model: gemma2:2b
+  - model: gemma2:9b
+  - model: gemma:2b
+  - model: gemma:7b
+  # Llama
+  - model: llama3.2:1b
+  - model: llama3.2:3b
+  - model: llama3.1:8b
+  - model: llama3:8b
+  - model: tinyllama:1.1b
+  # Qwen
+  - model: qwen3-vl:2b
+  - model: qwen3:0.6b
+  - model: qwen3:1.7b
+  - model: qwen3:4b
+  - model: qwen3:8b
+  - model: qwen3:14b
+  - model: qwen3-vl:4b
+  - model: qwen3-vl:8b
+  - model: qwen2.5:0.5b
+  - model: qwen2.5:1.5b
+  - model: qwen2.5:3b
+  - model: qwen2.5:7b
+  - model: qwen2.5:14b
+  - model: qwen2.5vl:3b
+  - model: qwen2.5vl:7b
+  - model: qwen2:0.5b
+  - model: qwen2:1.5b
+  - model: qwen2:7b
+  - model: qwen:0.5b
+  - model: qwen:1.8b
+  - model: qwen:4b
+  - model: qwen:7b
+  - model: qwen:14b
+  # Granite
+  - model: granite4:350m
+  - model: granite4:1b
+  - model: granite4:3b
+  # Mistral
+  - model: ministral-3:3b
+  - model: ministral-3:8b
   - model: ministral-3:14b
+  - model: mistral:7b
+  # Phi
+  - model: phi4-mini:3.8b
+  - model: phi4:14b
+  - model: phi3:3.8b
+  - model: phi3:14b
+  # Llava
+  - model: llava:7b
+  - model: llava:13b
+  # Dolphin
+  - model: dolphin3:8b
+  # Olmo
+  - model: olmo-3:7b
+  - model: olmo2:7b
+  - model: olmo2:13b

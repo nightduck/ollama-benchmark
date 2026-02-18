@@ -1,0 +1,11 @@
+# Author: Jason Chuang
+# License: MIT
+# Created: 2025-02-02
+version: 2.0
+models:
+  - model: gemma3n:e2b-it-q4_K_M  # Default
+  - model: gemma3n:e2b-it-q8_0
+  - model: gemma3n:e2b-it-fp16
+  - model: gemma3n:e4b-it-q4_K_M  # Default
+  - model: gemma3n:e4b-it-q8_0
+  - model: gemma3n:e4b-it-fp16

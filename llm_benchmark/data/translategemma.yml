@@ -1,0 +1,11 @@
+# Author: Jason Chuang
+# License: MIT
+# Created: 2025-02-02
+version: 2.0
+models:
+  - model: translategemma:4b-it-q4_K_M  # Default (same hash as latest/4b)
+  - model: translategemma:4b-it-q8_0
+  - model: translategemma:4b-it-bf16
+  - model: translategemma:12b-it-q4_K_M  # Default (same hash as 12b)
+  - model: translategemma:12b-it-q8_0
+  - model: translategemma:12b-it-bf16

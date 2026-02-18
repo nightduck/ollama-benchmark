@@ -1,0 +1,8 @@
+# Author: Jason Chuang
+# License: MIT
+# Created: 2025-02-02
+version: 2.0
+models:
+  - model: dolphin3:8b-llama3.1-q4_K_M  # Default
+  - model: dolphin3:8b-llama3.1-q8_0
+  - model: dolphin3:8b-llama3.1-fp16

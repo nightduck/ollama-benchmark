@@ -1,0 +1,14 @@
+# Author: Jason Chuang
+# License: MIT
+# Created: 2025-02-02
+version: 2.0
+models:
+  - model: phi4:14b-q4_K_M  # Default
+  - model: phi4:14b-q8_0
+  - model: phi4:14b-fp16
+  - model: phi4-mini:3.8b-q4_K_M  # Default
+  - model: phi4-mini:3.8b-q8_0
+  - model: phi4-mini:3.8b-fp16
+  - model: phi4-mini-reasoning:3.8b-q4_K_M  # Default
+  - model: phi4-mini-reasoning:3.8b-q8_0
+  - model: phi4-mini-reasoning:3.8b-fp16

@@ -1,0 +1,14 @@
+# Author: Jason Chuang
+# License: MIT
+# Created: 2025-02-02
+version: 2.0
+models:
+  - model: ministral-3:3b-instruct-2512-q4_K_M  # Default
+  - model: ministral-3:3b-instruct-2512-q8_0
+  - model: ministral-3:3b-instruct-2512-fp16
+  - model: ministral-3:8b-instruct-2512-q4_K_M  # Default
+  - model: ministral-3:8b-instruct-2512-q8_0
+  - model: ministral-3:8b-instruct-2512-fp16
+  - model: ministral-3:14b-instruct-2512-q4_K_M  # Default
+  - model: ministral-3:14b-instruct-2512-q8_0
+  - model: ministral-3:14b-instruct-2512-fp16
