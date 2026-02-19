@@ -36,6 +36,8 @@ RUN python3 -m venv /app/venv
 RUN . /app/venv/bin/activate && pip install -r requirements.txt
 RUN . /app/venv/bin/activate && python3 setup.py install
 
+COPY entrypoint.sh /app/entrypoint.sh
+
 # Add venv to PATH so commands can be found
 ENV PATH="/app/venv/bin:$PATH"
 
