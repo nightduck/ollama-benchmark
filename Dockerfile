@@ -28,7 +28,7 @@ RUN apt-get update && \
       git \
     && rm -rf /var/lib/apt/lists/*
 
-
+ARG GIT_CACHE_BUST=1
 # Build and install the ollama-benchmark repo
 RUN git clone https://github.com/nightduck/ollama-benchmark.git /app
 WORKDIR /app

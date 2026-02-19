@@ -95,7 +95,7 @@ def run_benchmark(models_file_path, benchmark_file_path, type, ollamabin: str = 
                         else:
                             for one_prompt in one_model_type['prompts']:
                                 print(f"prompt = {one_prompt['prompt']}")
-                                result = subprocess.run([ollamabin, 'run', model_name, one_prompt['prompt'],'--verbose'], capture_output=True, text=True, check=True, encoding='utf-8')
+                                result = subprocess.run([ollamabin, 'run', model_name, one_prompt['prompt'],'--verbose','--keepalive -1'], capture_output=True, text=True, check=True, encoding='utf-8')
                                 std_err = result.stderr
                                 #print(result.stderr)                                   
                                 file1.write(std_err)                                    
@@ -108,9 +108,13 @@ def run_benchmark(models_file_path, benchmark_file_path, type, ollamabin: str = 
                                         #print(number)
 
                         result = subprocess.run([ollamabin, 'ps'], capture_output=True, text=True, check=True, encoding='utf-8')
-                        std_out = result.stdout
+                        std_err = result.stderr
                         #print(result.stdout)
-                        file1.write(std_out)
+                        file1.write(std_err)
+
+                        for line in std_err.split('\n'):
+                            if model_name in line:
+                                print(line)
 
                         result = subprocess.run([ollamabin, 'stop', model_name], capture_output=True, text=True, check=True, encoding='utf-8')
                         std_err = result.stderr

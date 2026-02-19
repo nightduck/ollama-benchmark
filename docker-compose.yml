@@ -20,7 +20,7 @@ services:
     ports:
       # Map port 11434 on the host to the container's port
       - "11434:11434"
-    restart: unless-stopped
+    restart: no
     # If running on a Jetpack 5 or 6 system, explicitly set the version
     environment:
       - JETSON_JETPACK=5 # or 6

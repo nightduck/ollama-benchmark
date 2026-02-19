@@ -63,6 +63,7 @@ models:
   - model: phi4:14b
   - model: phi3:3.8b
   - model: phi3:14b
+  - model: phi3.5:3.8b
   # Llava
   - model: llava:7b
   - model: llava:13b
