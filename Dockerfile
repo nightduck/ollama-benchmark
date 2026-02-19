@@ -41,4 +41,4 @@ ENV PATH="/app/venv/bin:$PATH"
 
 # Use shell form for ENTRYPOINT to allow variable expansion and sourcing
 ENTRYPOINT ["/bin/bash", "-c"]
-CMD ["ollama serve > /dev/null 2>&1 & && llm_benchmark run"]
+CMD ["/app/entrypoint.sh"]
