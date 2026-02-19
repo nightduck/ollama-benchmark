@@ -17,9 +17,6 @@ RUN ln -fs /usr/share/zoneinfo/UTC /etc/localtime \
   && dpkg-reconfigure --frontend noninteractive tzdata \
   && rm -rf /var/lib/apt/lists/*
 
-# Configure timezone and locale
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       curl \
@@ -31,16 +28,17 @@ RUN apt-get update && \
       git \
     && rm -rf /var/lib/apt/lists/*
 
-FROM base AS ollamabenchmark
 
 # Build and install the ollama-benchmark repo
-RUN git clone https://github.com/nightduck/ollama-benchmark.git
-WORKDIR /ollama-benchmark
-RUN python3 -m venv /opt/venv
-RUN . /opt/venv/bin/activate && pip install -r requirements.txt
-RUN python3 setup.py install
+RUN git clone https://github.com/nightduck/ollama-benchmark.git /app
+WORKDIR /app
+RUN python3 -m venv /app/venv
+RUN . /app/venv/bin/activate && pip install -r requirements.txt
+RUN . /app/venv/bin/activate && python3 setup.py install
 
-FROM ollamabenchmark AS runner
+# Add venv to PATH so commands can be found
+ENV PATH="/app/venv/bin:$PATH"
 
-# TODO: Have entry point run the benchmark script with appropriate arguments
-ENTRYPOINT ["/bin/bash"]
+# Use shell form for ENTRYPOINT to allow variable expansion and sourcing
+ENTRYPOINT ["/bin/bash", "-c"]
+CMD ["ollama serve > /dev/null 2>&1 & && llm_benchmark run"]

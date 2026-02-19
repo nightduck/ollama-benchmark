@@ -7,7 +7,7 @@ models:
   - model: deepseek-r1:1.5b
   # Gemini
   - model: gemma3:270m
-  - model: gemma3:1.5b
+  - model: gemma3:1b
   - model: gemma3:4b
   - model: gemma3n:e2b
   - model: gemma3n:e4b
